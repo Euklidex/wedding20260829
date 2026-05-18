@@ -8,7 +8,7 @@
 
 Statická HTML webstránka — svadobná pozvánka pre hostí svadby **Veroniky a Matúša**.
 
-- **Termín svadby:** sobota **29. 8. 2026**, obrad o **13:30**
+- **Termín svadby:** sobota **29. 8. 2026**, obrad o **15:00**
 - **Miesto:** Statek Opajda · Horní Rožínka 4 · 592 51 Dolní Rožínka · Kraj Vysočina, ČR
 - **Jazyky webu:** **slovenčina (primárny)** a **čeština (sekundárny)**. Východiskový jazyk pri prvom načítaní je SK. Preferencia sa ukladá do `localStorage` pod kľúčom `lang`.
 - **Jazyk pre komunikáciu s ľudským vývojárom:** slovenčina
@@ -80,12 +80,12 @@ Aktívny jazyk má `class="active"` a `aria-pressed="true"`. Logiku prepínania 
 |---|---|---|
 | Mená | Veronika & Matúš | všade — nav, hero, footer, title |
 | Dátum | 29. 8. 2026 (sobota) | všade |
-| Čas obradu | 13:30 | `program.html`, countdown v `script.js` |
+| Čas obradu | 15:00 | `program.html`, countdown v `script.js` |
 | Miesto | Statek Opajda, Horní Rožínka 4 | `miesto.html`, `doprava.html`, footer |
 | RSVP deadline | **30. 6. 2026** | `index.html`, `rsvp.html` |
 | Telefón nevesty | +420 775 335 536 (veronikavrbkova10@gmail.com) | `rsvp.html` |
 | Telefón ženícha | +420 727 965 742 (hromadkam@gmail.com) | `rsvp.html` |
-| Cieľový čas countdownu | `2026-08-29T13:00:00+02:00` | `assets/script.js` riadok ~20 |
+| Cieľový čas countdownu | `2026-08-29T15:00:00+02:00` | `assets/script.js` riadok ~20 |
 
 ---
 
@@ -264,5 +264,5 @@ Pripravte si **dva varianty** QR kódu — jeden pre slovenských hostí, jeden 
 
 ---
 
-*Posledná aktualizácia tohto súboru: 2026-05-18 — pridaná dvojjazyčnosť SK/CZ (Sekcia 8).*
+*Posledná aktualizácia tohto súboru: 2026-05-18 — pridaná dvojjazyčnosť SK/CZ (Sekcia 8), posunutý čas obradu na 15:00.*
 *Pri každej zmene v projekte aktualizuj aj tento dátum.*

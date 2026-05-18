@@ -100,9 +100,9 @@
   });
 })();
 
-// --- Countdown to 29.8.2026, 13:00 ---
+// --- Countdown to 29.8.2026, 15:00 (čas obradu) ---
 (function () {
-  const target = new Date('2026-08-29T13:00:00+02:00').getTime();
+  const target = new Date('2026-08-29T15:00:00+02:00').getTime();
   const elDays  = document.getElementById('cd-days');
   const elHours = document.getElementById('cd-hours');
   const elMins  = document.getElementById('cd-mins');
@@ -143,6 +143,72 @@
   }
   tick();
   setInterval(tick, 1000);
+})();
+
+// --- Lightbox pre .gallery-item (klik = zväčšenie + prev/next) ---
+(function () {
+  const galleries = document.querySelectorAll('.gallery');
+  if (!galleries.length) return;
+
+  // Zozbieraj všetky obrázky z galérie/galérií na stránke
+  const items = [];
+  galleries.forEach(gal => {
+    gal.querySelectorAll('.gallery-item').forEach(el => {
+      const bg = el.style.backgroundImage || '';
+      const m = bg.match(/url\((['"]?)(.*?)\1\)/);
+      if (!m) return;
+      const idx = items.length;
+      items.push(m[2]);
+      el.addEventListener('click', () => open(idx));
+    });
+  });
+  if (!items.length) return;
+
+  // Vytvor lightbox DOM
+  const lb = document.createElement('div');
+  lb.className = 'lightbox';
+  lb.setAttribute('role', 'dialog');
+  lb.setAttribute('aria-modal', 'true');
+  lb.innerHTML =
+    '<button class="lightbox-btn lightbox-close" aria-label="Zavrieť">&times;</button>' +
+    '<button class="lightbox-btn lightbox-prev"  aria-label="Predchádzajúca">&lsaquo;</button>' +
+    '<button class="lightbox-btn lightbox-next"  aria-label="Nasledujúca">&rsaquo;</button>' +
+    '<img class="lightbox-img" alt="">' +
+    '<div class="lightbox-counter"></div>';
+  document.body.appendChild(lb);
+
+  const imgEl = lb.querySelector('.lightbox-img');
+  const counter = lb.querySelector('.lightbox-counter');
+  let current = 0;
+
+  function render() {
+    imgEl.src = items[current];
+    counter.textContent = (current + 1) + ' / ' + items.length;
+  }
+  function open(idx) {
+    current = idx;
+    render();
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function close() {
+    lb.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  function prev() { current = (current - 1 + items.length) % items.length; render(); }
+  function next() { current = (current + 1) % items.length; render(); }
+
+  lb.querySelector('.lightbox-close').addEventListener('click', close);
+  lb.querySelector('.lightbox-prev').addEventListener('click', e => { e.stopPropagation(); prev(); });
+  lb.querySelector('.lightbox-next').addEventListener('click', e => { e.stopPropagation(); next(); });
+  imgEl.addEventListener('click', e => e.stopPropagation());
+  lb.addEventListener('click', e => { if (e.target === lb) close(); });
+  document.addEventListener('keydown', e => {
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'Escape') close();
+    else if (e.key === 'ArrowLeft') prev();
+    else if (e.key === 'ArrowRight') next();
+  });
 })();
 
 // --- Reveal on scroll (subtle fade-in) ---
