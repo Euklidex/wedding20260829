@@ -10,7 +10,7 @@ Statická HTML webstránka — svadobná pozvánka pre hostí svadby **Veroniky 
 
 - **Termín svadby:** sobota **29. 8. 2026**, obrad o **13:30**
 - **Miesto:** Statek Opajda · Horní Rožínka 4 · 592 51 Dolní Rožínka · Kraj Vysočina, ČR
-- **Jazyk webu:** slovenčina (`<html lang="sk">`)
+- **Jazyky webu:** **slovenčina (primárny)** a **čeština (sekundárny)**. Východiskový jazyk pri prvom načítaní je SK. Preferencia sa ukladá do `localStorage` pod kľúčom `lang`.
 - **Jazyk pre komunikáciu s ľudským vývojárom:** slovenčina
 
 ### Cieľ webu
@@ -46,7 +46,7 @@ wedding20260829/
 ├── miesto.html       # Statek Opajda — popis, adresa, galéria
 ├── program.html      # Časový plán dňa (12:30 → 02:00)
 ├── doprava.html      # Mapa, ako sa dostať, ubytovanie
-├── praktike.html     # Dress code, darčeky, galéria, FAQ
+├── prakticke.html     # Dress code, darčeky, galéria, FAQ
 ├── rsvp.html         # Odkaz na Google Forms + zoznam otázok + kontakty
 ├── assets/
 │   ├── style.css     # Všetky štýly, CSS premenné na začiatku (paleta)
@@ -65,6 +65,13 @@ Každá stránka má **rovnakú navigáciu** (`<nav class="nav">`) a **rovnakú 
 
 Aktívny odkaz v navigácii sa vyznačuje cez `class="active"` — každá stránka má `active` len pri svojom odkaze.
 
+### Prepínač jazyka v navigácii
+V navigácii je `<div class="lang-switch">` s dvomi `<button class="lang-btn">` — inline SVG vlajočky:
+- **SK** — biela/modrá/červená vodorovne **+ štátny znak SR** (červený štít, modré trojvršie, biely dvojkríž). Pásy bez znaku = nie je vlajka SR.
+- **CZ** — biela/červená vodorovne + modrý trojuholník z hoist strany.
+
+Aktívny jazyk má `class="active"` a `aria-pressed="true"`. Logiku prepínania má `assets/script.js`.
+
 ---
 
 ## 4. Kľúčové údaje (zatiaľ platné)
@@ -79,8 +86,6 @@ Aktívny odkaz v navigácii sa vyznačuje cez `class="active"` — každá strá
 | Telefón nevesty | +420 775 335 536 (veronikavrbkova10@gmail.com) | `rsvp.html` |
 | Telefón ženícha | +420 727 965 742 (hromadkam@gmail.com) | `rsvp.html` |
 | Cieľový čas countdownu | `2026-08-29T13:00:00+02:00` | `assets/script.js` riadok ~20 |
-
-> ⚠️ **Pozn.:** `style.css` má v hlavičke komentár `SVADBA ANNA & TOMÁŠ` — to je staré z templatu, **mená sú už správne všade inde**. Pokojne to oprav, ak ideš ten súbor meniť.
 
 ---
 
@@ -114,17 +119,107 @@ CSS premenné v `assets/style.css` (`:root`):
 ## 7. Pravidlá pre úpravy (čítaj predtým, než niečo zmeníš)
 
 1. **Zachovaj konzistentnosť naprieč stránkami.** Navigácia, pätka, fonty a `<link rel="stylesheet">` musia byť identické. Pri zmene v jednej stránke premietni do všetkých.
-2. **Slovenčina.** Texty pre hostí píš v slovenčine (web má `lang="sk"`).
-3. **Žiadny build krok.** Neinštaluj `npm`/`webpack`/Tailwind atď. Projekt je úmyselne statický.
-4. **Obrázky** ukladaj do `Opajda_files/` (existujúca štruktúra) alebo vytvor novú podsložku. Preferuj `.webp`.
-5. **Kredity fotografií** — fotky sú © `opajda.cz`. Pri pridávaní galérií nezabudni zachovať atribúciu (vidno v `miesto.html` a `praktike.html`).
-6. **Žiadne emoji v kóde, len v UI** kde sú zámerne (ikony v `info-block h3 .icon`).
-7. **Komentáre v kóde** — minimum, len ak je dôvod „prečo" nezrejmý.
-8. **Citlivé údaje** — telefónne čísla a e-maily sú zámerne uvedené v `rsvp.html` (svadobní hostia). Necommituj iné súkromné údaje (interné poznámky, finančné info, zoznamy hostí s adresami).
+2. **🌐 DVOJJAZYČNOSŤ JE POVINNÁ.** Web má SK aj CZ verziu. **Každý nový text musí byť pridaný v oboch jazykoch** — viď [Sekcia 8: i18n workflow](#8-i18n-workflow--dvojjazyčné-texty).
+3. **Slovenčina je primárny jazyk.** HTML súbor má `<html lang="sk">`, viditeľný (default) text v HTML je slovenský. Český preklad je v `data-cs` atribútoch.
+4. **Žiadny build krok.** Neinštaluj `npm`/`webpack`/Tailwind atď. Projekt je úmyselne statický.
+5. **Obrázky** ukladaj do `Opajda_files/` (existujúca štruktúra) alebo vytvor novú podsložku. Preferuj `.webp`.
+6. **Kredity fotografií** — fotky sú © `opajda.cz`. Pri pridávaní galérií nezabudni zachovať atribúciu (vidno v `miesto.html` a `prakticke.html`).
+7. **Žiadne emoji v kóde, len v UI** kde sú zámerne (ikony v `info-block h3 .icon`).
+8. **Komentáre v kóde** — minimum, len ak je dôvod „prečo" nezrejmý.
+9. **Citlivé údaje** — telefónne čísla a e-maily sú zámerne uvedené v `rsvp.html` (svadobní hostia). Necommituj iné súkromné údaje (interné poznámky, finančné info, zoznamy hostí s adresami).
 
 ---
 
-## 8. 🔄 Auto-update tohto súboru (DÔLEŽITÉ pre AI agentov)
+## 8. i18n workflow — dvojjazyčné texty
+
+**Web je SK + CZ. Každý nový alebo zmenený text musí mať obe verzie. Bez výnimky.**
+
+### Ako funguje prepínanie
+
+- HTML obsahuje **default text v slovenčine** (kvôli `lang="sk"` a aby SK návštevník nevidel žiadny „flash" pri načítaní).
+- Slovenský aj český preklad je v `data-*` atribútoch na tom istom elemente:
+  - `data-sk="..."` a `data-cs="..."` — pre **čistý text** (JS nastaví `textContent`).
+  - `data-sk-html="..."` a `data-cs-html="..."` — pre **HTML obsah** (`<strong>`, `<br>`, `<a>`, …); JS nastaví `innerHTML`. **Vnútorné úvodzovky musia byť escapované cez `&quot;`** (HTML atribút).
+- Pre `<title>` a `<meta name="description">` použi `data-sk` / `data-cs` — JS to vie spraviť cez `document.title` / `setAttribute('content', …)`.
+
+### Určenie počiatočného jazyka (priorita)
+
+Pri načítaní stránky JS určí jazyk v tomto poradí:
+
+1. **URL parameter** — `?lang=sk`, `?lang=cs`, alebo skrátene `?l=sk`, `?l=cs`. Najvyššia priorita.
+2. **localStorage** — uložený jazyk z predchádzajúcej návštevy (kľúč `lang`).
+3. **Default** — `sk`.
+
+Vybraný jazyk sa **vždy uloží do `localStorage`**, takže ak hosť otvorí stránku cez QR (`?lang=cs`) a potom prejde na inú podstránku bez parametra, jazyk pretrvá. Klik na vlajočku v navigácii tiež uloží voľbu do `localStorage`.
+
+### QR kódy pre svadobné pozvánky
+
+Pripravte si **dva varianty** QR kódu — jeden pre slovenských hostí, jeden pre českých:
+
+| Verzia pozvánky | URL pre QR generátor |
+|---|---|
+| Slovenská | `https://<vasa-domena>/?lang=sk` (alebo `?l=sk`) |
+| Česká     | `https://<vasa-domena>/?lang=cs` (alebo `?l=cs`) |
+
+**Tip pre kratšie QR kódy:** používaj `?l=sk` / `?l=cs` — kratšia URL = jednoduchší QR kód = lepšia čitateľnosť na papieri pri menšej veľkosti.
+
+### Príklady
+
+**Jednoduchý text:**
+```html
+<h2 data-sk="Berieme sa." data-cs="Bereme se.">Berieme sa.</h2>
+```
+
+**Text s HTML vnútri (`<strong>`, `<br>`):**
+```html
+<p data-sk-html="Potvrďte účasť do <strong>30. júna 2026</strong>."
+   data-cs-html="Potvrďte účast do <strong>30. června 2026</strong>.">
+  Potvrďte účasť do <strong>30. júna 2026</strong>.
+</p>
+```
+
+**Text s odkazom (úvodzovky cez `&quot;`):**
+```html
+<p data-sk-html="Pozri <a href=&quot;https://idos.cz&quot;>IDOS.cz</a>."
+   data-cs-html="Podívej se na <a href=&quot;https://idos.cz&quot;>IDOS.cz</a>.">
+  Pozri <a href="https://idos.cz">IDOS.cz</a>.
+</p>
+```
+
+**Title a meta:**
+```html
+<title data-sk="Program — Svadba" data-cs="Program — Svatba">Program — Svadba</title>
+<meta name="description"
+      data-sk="Pozvánka na svadbu."
+      data-cs="Pozvánka na svatbu."
+      content="Pozvánka na svadbu.">
+```
+
+### Checklist pri pridávaní/zmene textu
+
+- [ ] Element má `data-sk` ALEBO `data-sk-html` (podľa toho, či obsahuje HTML).
+- [ ] Element má aj zodpovedajúci `data-cs` / `data-cs-html`.
+- [ ] Default text v elemente je **slovenský** (rovnaký ako `data-sk`).
+- [ ] Ak je to nadpis stránky alebo meta, je aj `<title>` a `<meta name="description">` dvojjazyčné.
+- [ ] Test: v prehliadači klikni na CZ vlajočku — zmení sa všetko? Reload — preferencia ostane?
+- [ ] Test: localStorage.clear() v dev tools, reload — vidím SK (default)?
+
+### Čo NIE JE potrebné prekladať
+
+- Vlastné mená, dátumy ako `29 · 08 · 2026`, telefónne čísla, e-maily, adresy (Statek Opajda, Horní Rožínka 4 atď.).
+- Emoji ikony (`🚗`, `🛏`).
+- Kódové bloky, `<code>`.
+- Ak chceš mať istotu, daj `data-sk` aj `data-cs` s rovnakou hodnotou — engine to bezpečne zvládne.
+
+### Keby si chcel pridať 3. jazyk (napr. EN)
+
+1. V `assets/script.js` doplň `'en'` do poľa `SUPPORTED`.
+2. V navigácii každej stránky pridaj `<button class="lang-btn" data-lang="en">…</button>` s vlajočkou.
+3. Ku každému `data-sk` doplň `data-en="..."`; ku každému `data-sk-html` doplň `data-en-html="..."`.
+
+---
+
+## 9. 🔄 Auto-update tohto súboru (DÔLEŽITÉ pre AI agentov)
 
 **Keď meníš projekt, zároveň aktualizuj `PROJECT.md`, aby zostal pravdivý.** Konkrétne:
 
@@ -142,13 +237,15 @@ CSS premenné v `assets/style.css` (`:root`):
 | Nasadenie na hosting + doména | Sekcia 2 — dopíš URL a hosting provider |
 | Zmena štruktúry priečinkov / premenovanie zložky obrázkov | Sekcia 3 |
 | Nová dohoda s nevestou/ženíchom o postupe (napr. „obrázky vždy zmenši pred commitom") | Sekcia 7 (Pravidlá pre úpravy) |
-| Pridanie ďalšieho jazyka (CZ verzia a pod.) | Sekcia 1 + Sekcia 3 |
+| Pridanie ďalšieho jazyka (EN, DE…) | Sekcia 1 + Sekcia 8 (doplň návod) + Sekcia 2 |
+| Pridanie nového textu / sekcie / stránky | **POVINNÉ:** texty v SK aj CZ podľa pravidiel v Sekcii 8 |
+| Zmena prekladového kľúča / atribútu (`data-sk`, `data-cs`…) | Sekcia 8 — uprav príklady aj checklist |
 
 ### Ako aktualizovať:
 
 1. **Najprv** sprav samotnú zmenu v kóde / obsahu.
 2. **Hneď potom** v tej istej úprave (commit-e) doplň/oprav príslušnú sekciu v `PROJECT.md`.
-3. Ak pribudne **nový druh informácie**, ktorý sa nikde nevpíše, **pridaj novú sekciu** a v sekcii 8 doplň riadok do tabuľky.
+3. Ak pribudne **nový druh informácie**, ktorý sa nikde nevpíše, **pridaj novú sekciu** a v sekcii 9 doplň riadok do tabuľky.
 4. Ak nejaká informácia **prestane platiť**, **vymaž ju** — neudržiavaj stálu históriu, súbor má byť pravdivý ku dnešnému dňu. Históriu drží `git log`.
 
 ### Čo do `PROJECT.md` **nepatrí**:
@@ -160,12 +257,12 @@ CSS premenné v `assets/style.css` (`:root`):
 
 ---
 
-## 9. Kontakt na majiteľov projektu
+## 10. Kontakt na majiteľov projektu
 
 - **Nevesta:** Veronika — +420 775 335 536, veronikavrbkova10@gmail.com
 - **Ženích:** Matúš — +420 727 965 742, hromadkam@gmail.com (technický kontakt pre web)
 
 ---
 
-*Posledná aktualizácia tohto súboru: 2026-05-18.*
+*Posledná aktualizácia tohto súboru: 2026-05-18 — pridaná dvojjazyčnosť SK/CZ (Sekcia 8).*
 *Pri každej zmene v projekte aktualizuj aj tento dátum.*

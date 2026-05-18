@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RSVP — Potvrďte účasť · Veronika & Matúš</title>
+<title data-sk="RSVP — Potvrďte účasť · Veronika & Matúš"
+       data-cs="RSVP — Potvrďte účast · Veronika & Matúš">RSVP — Potvrďte účasť · Veronika & Matúš</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -16,39 +17,67 @@
     <a href="index.html" class="nav-logo">Veronika <span class="amp">&</span> Matúš</a>
     <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
     <ul class="nav-links">
-      <li><a href="index.html">Domov</a></li>
-      <li><a href="miesto.html">Miesto</a></li>
-      <li><a href="program.html">Program</a></li>
-      <li><a href="doprava.html">Doprava & ubytovanie</a></li>
-      <li><a href="praktike.html">Praktické</a></li>
-      <li><a href="rsvp.html" class="active">RSVP</a></li>
+      <li><a href="index.html" data-sk="Domov" data-cs="Domů">Domov</a></li>
+      <li><a href="miesto.html" data-sk="Miesto" data-cs="Místo">Miesto</a></li>
+      <li><a href="program.html" data-sk="Program" data-cs="Program">Program</a></li>
+      <li><a href="doprava.html" data-sk="Doprava & ubytovanie" data-cs="Doprava & ubytování">Doprava & ubytovanie</a></li>
+      <li><a href="prakticke.html" data-sk="Praktické" data-cs="Praktické">Praktické</a></li>
+      <li><a href="rsvp.html" class="active" data-sk="RSVP" data-cs="RSVP">RSVP</a></li>
     </ul>
+    <div class="lang-switch">
+      <button class="lang-btn" data-lang="sk" aria-label="Slovenčina" aria-pressed="true">
+        <svg viewBox="0 0 30 18" width="28" height="17" aria-hidden="true">
+          <rect width="30" height="6" y="0" fill="#fff"/>
+          <rect width="30" height="6" y="6" fill="#0b4ea2"/>
+          <rect width="30" height="6" y="12" fill="#ee1c25"/>
+          <path d="M 3 3 L 10 3 L 10 11 C 10 13.5 8.2 14.8 6.5 15.5 C 4.8 14.8 3 13.5 3 11 Z" fill="#ee1c25" stroke="#fff" stroke-width="0.45"/>
+          <path d="M 3.6 11 C 4.2 9.5 4.9 9.5 5.4 10.8 C 5.9 8.8 7.1 8.8 7.6 10.8 C 8.1 9.5 8.8 9.5 9.4 11 L 9.4 13.5 C 8 14.3 5 14.3 3.6 13.5 Z" fill="#0b4ea2"/>
+          <g fill="#fff">
+            <rect x="6.18" y="4.5" width="0.65" height="5.5"/>
+            <rect x="5.2" y="5.7" width="2.6" height="0.6"/>
+            <rect x="4.7" y="7.2" width="3.6" height="0.6"/>
+          </g>
+        </svg>
+      </button>
+      <button class="lang-btn" data-lang="cs" aria-label="Čeština" aria-pressed="false">
+        <svg viewBox="0 0 30 18" width="28" height="17" aria-hidden="true">
+          <rect width="30" height="9" y="0" fill="#fff"/>
+          <rect width="30" height="9" y="9" fill="#d7141a"/>
+          <polygon points="0,0 15,9 0,18" fill="#11457e"/>
+        </svg>
+      </button>
+    </div>
   </div>
 </nav>
 
 <header class="hero inner">
   <div class="hero-bg" style="background-image: url('Opajda_files/svatby_files/120.webp');"></div>
   <div class="hero-content">
-    <div class="eyebrow">Tešíme sa, či vás uvidíme</div>
-    <h1>Potvrďte účasť</h1>
-    <div class="location-tag">RSVP do 30. júna 2026</div>
+    <div class="eyebrow" data-sk="Tešíme sa, či vás uvidíme" data-cs="Těšíme se, jestli vás uvidíme">Tešíme sa, či vás uvidíme</div>
+    <h1 data-sk="Potvrďte účasť" data-cs="Potvrďte účast">Potvrďte účasť</h1>
+    <div class="location-tag" data-sk="RSVP do 30. júna 2026" data-cs="RSVP do 30. června 2026">RSVP do 30. júna 2026</div>
   </div>
 </header>
 
 <section>
   <div class="section-inner rsvp-hero">
-    <span class="rsvp-deadline">Termín · do 30. 6. 2026</span>
-    <h2>Pomôžete nám s prípravou?</h2>
-    <p class="lead" style="margin: 1rem auto 2rem; max-width: 620px;">
+    <span class="rsvp-deadline" data-sk="Termín · do 30. 6. 2026" data-cs="Termín · do 30. 6. 2026">Termín · do 30. 6. 2026</span>
+    <h2 data-sk="Pomôžete nám s prípravou?" data-cs="Pomůžete nám s přípravou?">Pomôžete nám s prípravou?</h2>
+    <p class="lead" style="margin: 1rem auto 2rem; max-width: 620px;"
+       data-sk="Vyplnenie formulára vám zaberie pár minút. Vďaka tomu vieme presnejšie naplánovať jedlo, nápoje, miesta a ubytovanie. Bez vás by to nebolo ono."
+       data-cs="Vyplnění formuláře vám zabere pár minut. Díky tomu můžeme přesněji naplánovat jídlo, nápoje, místa a ubytování. Bez vás by to nebylo ono.">
       Vyplnenie formulára vám zaberie pár minút. Vďaka tomu vieme presnejšie naplánovať
       jedlo, nápoje, miesta a ubytovanie. Bez vás by to nebolo ono.
     </p>
 
-    <a href="https://forms.gle/VASE_URL_TU" target="_blank" rel="noopener" class="btn btn-big">
+    <a href="https://forms.gle/VASE_URL_TU" target="_blank" rel="noopener" class="btn btn-big"
+       data-sk="Vyplniť formulár →" data-cs="Vyplnit formulář →">
       Vyplniť formulár →
     </a>
 
-    <p class="mt-2" style="font-size: 0.85rem; color: var(--text-soft); font-style: italic;">
+    <p class="mt-2" style="font-size: 0.85rem; color: var(--text-soft); font-style: italic;"
+       data-sk-html="Po vyplnení vám príde potvrdzujúci e-mail (ak ste ho v Google Forms zadali).<br>Otázky? Zavolajte alebo napíšte — kontakty máme dole."
+       data-cs-html="Po vyplnění vám přijde potvrzující e-mail (pokud jste ho v Google Forms zadali).<br>Otázky? Zavolejte nebo napište — kontakty máme dole.">
       Po vyplnení vám príde potvrdzujúci e-mail (ak ste ho v Google Forms zadali).<br>
       Otázky? Zavolajte alebo napíšte — kontakty máme dole.
     </p>
@@ -58,58 +87,62 @@
 <section class="alt-bg">
   <div class="section-inner">
     <div class="section-head">
-      <span class="eyebrow">Aby ste sa nezľakli</span>
-      <h2>Na čo sa budeme pýtať</h2>
+      <span class="eyebrow" data-sk="Aby ste sa nezľakli" data-cs="Abyste se nelekli">Aby ste sa nezľakli</span>
+      <h2 data-sk="Na čo sa budeme pýtať" data-cs="Na co se budeme ptát">Na čo sa budeme pýtať</h2>
       <div class="divider"><span>✿</span></div>
-      <p class="lead">Toto sú otázky, ktoré nájdete vo formulári. Pripravte si na ne odpovede vopred.</p>
+      <p class="lead"
+         data-sk="Toto sú otázky, ktoré nájdete vo formulári. Pripravte si na ne odpovede vopred."
+         data-cs="Toto jsou otázky, které najdete ve formuláři. Připravte si na ně odpovědi předem.">Toto sú otázky, ktoré nájdete vo formulári. Pripravte si na ne odpovede vopred.</p>
     </div>
 
     <ol class="questions-list">
       <li>
-        <strong>Vaše meno (a priezvisko)</strong>
-        <span class="hint">Ak prichádzate s partnerom/partnerkou, vyplňte meno za vás aj za neho/ňu.</span>
+        <strong data-sk="Vaše meno (a priezvisko)" data-cs="Vaše jméno (a příjmení)">Vaše meno (a priezvisko)</strong>
+        <span class="hint" data-sk="Ak prichádzate s partnerom/partnerkou, vyplňte meno za vás aj za neho/ňu." data-cs="Pokud přicházíte s partnerem/partnerkou, vyplňte jméno za vás i za něj/ni.">Ak prichádzate s partnerom/partnerkou, vyplňte meno za vás aj za neho/ňu.</span>
       </li>
       <li>
-        <strong>E-mail / telefón na vás</strong>
-        <span class="hint">Pre prípad, že by sme potrebovali rýchlo niečo doriešiť.</span>
+        <strong data-sk="E-mail / telefón na vás" data-cs="E-mail / telefon na vás">E-mail / telefón na vás</strong>
+        <span class="hint" data-sk="Pre prípad, že by sme potrebovali rýchlo niečo doriešiť." data-cs="Pro případ, že bychom potřebovali rychle něco dořešit.">Pre prípad, že by sme potrebovali rýchlo niečo doriešiť.</span>
       </li>
       <li>
-        <strong>Prídete?</strong>
-        <span class="hint">Áno · Nie · Ešte neviem. Bez výčitiek, jednoducho čestne.</span>
+        <strong data-sk="Prídete?" data-cs="Přijdete?">Prídete?</strong>
+        <span class="hint" data-sk="Áno · Nie · Ešte neviem. Bez výčitiek, jednoducho čestne." data-cs="Ano · Ne · Ještě nevím. Bez výčitek, prostě upřímně.">Áno · Nie · Ešte neviem. Bez výčitiek, jednoducho čestne.</span>
       </li>
       <li>
-        <strong>S kým prichádzate?</strong>
-        <span class="hint">Sám/sama · S partnerom (meno) · S deťmi (počet a vek).</span>
+        <strong data-sk="S kým prichádzate?" data-cs="S kým přicházíte?">S kým prichádzate?</strong>
+        <span class="hint" data-sk="Sám/sama · S partnerom (meno) · S deťmi (počet a vek)." data-cs="Sám/sama · S partnerem (jméno) · S dětmi (počet a věk).">Sám/sama · S partnerom (meno) · S deťmi (počet a vek).</span>
       </li>
       <li>
-        <strong>Strava — máte vegetariánsku/vegánsku/bezlepkovú preferenciu?</strong>
-        <span class="hint">Označte si, ak chcete iné menu ako klasické mäsité.</span>
+        <strong data-sk="Strava — máte vegetariánsku/vegánsku/bezlepkovú preferenciu?" data-cs="Strava — máte vegetariánskou/veganskou/bezlepkovou preferenci?">Strava — máte vegetariánsku/vegánsku/bezlepkovú preferenciu?</strong>
+        <span class="hint" data-sk="Označte si, ak chcete iné menu ako klasické mäsité." data-cs="Označte si, pokud chcete jiné menu než klasické masité.">Označte si, ak chcete iné menu ako klasické mäsité.</span>
       </li>
       <li>
-        <strong>Alergie alebo intolerancie</strong>
-        <span class="hint">Aby sme kuchára aj barmana vedeli upozorniť.</span>
+        <strong data-sk="Alergie alebo intolerancie" data-cs="Alergie nebo intolerance">Alergie alebo intolerancie</strong>
+        <span class="hint" data-sk="Aby sme kuchára aj barmana vedeli upozorniť." data-cs="Abychom kuchaře i barmana mohli upozornit.">Aby sme kuchára aj barmana vedeli upozorniť.</span>
       </li>
       <li>
-        <strong>Ako sa plánujete na miesto dostať?</strong>
-        <span class="hint">Vlastným autom · Vlakom + taxi · Mali by ste záujem o spoločnú dopravu?</span>
+        <strong data-sk="Ako sa plánujete na miesto dostať?" data-cs="Jak se plánujete na místo dostat?">Ako sa plánujete na miesto dostať?</strong>
+        <span class="hint" data-sk="Vlastným autom · Vlakom + taxi · Mali by ste záujem o spoločnú dopravu?" data-cs="Vlastním autem · Vlakem + taxi · Měli byste zájem o společnou dopravu?">Vlastným autom · Vlakom + taxi · Mali by ste záujem o spoločnú dopravu?</span>
       </li>
       <li>
-        <strong>Ubytovanie</strong>
-        <span class="hint">Mám záujem o izbu na statku · Nájdem si ubytovanie v okolí · Stan v lúke · Vraciam sa domov.</span>
+        <strong data-sk="Ubytovanie" data-cs="Ubytování">Ubytovanie</strong>
+        <span class="hint" data-sk="Mám záujem o izbu na statku · Nájdem si ubytovanie v okolí · Stan v lúke · Vraciam sa domov." data-cs="Mám zájem o pokoj na statku · Najdu si ubytování v okolí · Stan na louce · Vracím se domů.">Mám záujem o izbu na statku · Nájdem si ubytovanie v okolí · Stan v lúke · Vraciam sa domov.</span>
       </li>
       <li>
-        <strong>Pesnička, na ktorú musíte tancovať</strong>
-        <span class="hint">Pomôžete nám zostaviť playlist, ktorý bude váš.</span>
+        <strong data-sk="Pesnička, na ktorú musíte tancovať" data-cs="Písnička, na kterou musíte tancovat">Pesnička, na ktorú musíte tancovať</strong>
+        <span class="hint" data-sk="Pomôžete nám zostaviť playlist, ktorý bude váš." data-cs="Pomůžete nám sestavit playlist, který bude váš.">Pomôžete nám zostaviť playlist, ktorý bude váš.</span>
       </li>
       <li>
-        <strong>Niečo, čo nám chcete odkázať</strong>
-        <span class="hint">Doplnková otázka — voľný odkaz, prianie, poznámka.</span>
+        <strong data-sk="Niečo, čo nám chcete odkázať" data-cs="Něco, co nám chcete vzkázat">Niečo, čo nám chcete odkázať</strong>
+        <span class="hint" data-sk="Doplnková otázka — voľný odkaz, prianie, poznámka." data-cs="Doplňková otázka — volný vzkaz, přání, poznámka.">Doplnková otázka — voľný odkaz, prianie, poznámka.</span>
       </li>
     </ol>
 
     <div class="callout mt-3">
-      <h3>Ako si formulár vytvoriť (poznámka pre nevestu/ženícha)</h3>
-      <p style="text-align: left; max-width: 720px; margin: 0 auto;">
+      <h3 data-sk="Ako si formulár vytvoriť (poznámka pre nevestu/ženícha)" data-cs="Jak si formulář vytvořit (poznámka pro nevěstu/ženicha)">Ako si formulár vytvoriť (poznámka pre nevestu/ženícha)</h3>
+      <p style="text-align: left; max-width: 720px; margin: 0 auto;"
+         data-sk-html="Otvorte si <a href=&quot;https://forms.google.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot; style=&quot;color: var(--text); text-decoration: underline;&quot;>forms.google.com</a>, vytvorte nový formulár a otázky vyššie tam jednoducho prekopírujte. Po vytvorení kliknite na „Odoslať", vyberte odkaz, skopírujte ho a v <code>rsvp.html</code> nahraďte <code>https://forms.gle/VASE_URL_TU</code> svojim odkazom."
+         data-cs-html="Otevřete si <a href=&quot;https://forms.google.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot; style=&quot;color: var(--text); text-decoration: underline;&quot;>forms.google.com</a>, vytvořte nový formulář a otázky výše tam jednoduše překopírujte. Po vytvoření klikněte na „Odeslat", vyberte odkaz, zkopírujte ho a v <code>rsvp.html</code> nahraďte <code>https://forms.gle/VASE_URL_TU</code> svým odkazem.">
         Otvorte si <a href="https://forms.google.com" target="_blank" rel="noopener" style="color: var(--text); text-decoration: underline;">forms.google.com</a>,
         vytvorte nový formulár a otázky vyššie tam jednoducho prekopírujte. Po vytvorení
         kliknite na „Odoslať", vyberte odkaz, skopírujte ho a v <code>rsvp.html</code>
@@ -123,22 +156,28 @@
 <section>
   <div class="section-inner">
     <div class="section-head">
-      <span class="eyebrow">Ak nečo nie je jasné</span>
-      <h2>Pýtajte sa</h2>
+      <span class="eyebrow" data-sk="Ak niečo nie je jasné" data-cs="Pokud něco není jasné">Ak niečo nie je jasné</span>
+      <h2 data-sk="Pýtajte sa" data-cs="Ptejte se">Pýtajte sa</h2>
     </div>
 
     <div class="info-grid">
       <div class="info-block">
-        <h3><span class="icon">💌</span> Nevesta</h3>
-        <p>Veronika<br>+420 775 335 536<br>veronikavrbkova10@gmail.com</p>
+        <h3 data-sk-html="<span class=&quot;icon&quot;>💌</span> Nevesta"
+            data-cs-html="<span class=&quot;icon&quot;>💌</span> Nevěsta"><span class="icon">💌</span> Nevesta</h3>
+        <p data-sk-html="Veronika<br>+420 775 335 536<br>veronikavrbkova10@gmail.com"
+           data-cs-html="Veronika<br>+420 775 335 536<br>veronikavrbkova10@gmail.com">Veronika<br>+420 775 335 536<br>veronikavrbkova10@gmail.com</p>
       </div>
       <div class="info-block">
-        <h3><span class="icon">📞</span> Ženích</h3>
-        <p>Matúš<br>+420 727 965 742<br>hromadkam@gmail.com</p>
+        <h3 data-sk-html="<span class=&quot;icon&quot;>📞</span> Ženích"
+            data-cs-html="<span class=&quot;icon&quot;>📞</span> Ženich"><span class="icon">📞</span> Ženích</h3>
+        <p data-sk-html="Matúš<br>+420 727 965 742<br>hromadkam@gmail.com"
+           data-cs-html="Matúš<br>+420 727 965 742<br>hromadkam@gmail.com">Matúš<br>+420 727 965 742<br>hromadkam@gmail.com</p>
       </div>
       <div class="info-block">
-        <h3><span class="icon">💍</span> Svedkovia</h3>
-        <p>Pre logistické otázky deň pred svadbou aj v deň D.<br>Kontakty rozošleme tým, čo potvrdia účasť.</p>
+        <h3 data-sk-html="<span class=&quot;icon&quot;>💍</span> Svedkovia"
+            data-cs-html="<span class=&quot;icon&quot;>💍</span> Svědci"><span class="icon">💍</span> Svedkovia</h3>
+        <p data-sk-html="Pre logistické otázky deň pred svadbou aj v deň D.<br>Kontakty rozošleme tým, čo potvrdia účasť."
+           data-cs-html="Pro logistické otázky den před svatbou i v den D.<br>Kontakty rozešleme těm, kdo potvrdí účast.">Pre logistické otázky deň pred svadbou aj v deň D.<br>Kontakty rozošleme tým, čo potvrdia účasť.</p>
       </div>
     </div>
   </div>
@@ -146,8 +185,8 @@
 
 <footer>
   <div class="names">Veronika <span class="amp">&</span> Matúš</div>
-  <div>29. 08. 2026 · Statek Opajda</div>
-  <div class="small">S láskou ♥</div>
+  <div data-sk="29. 08. 2026 · Statek Opajda" data-cs="29. 08. 2026 · Statek Opajda">29. 08. 2026 · Statek Opajda</div>
+  <div class="small" data-sk="S láskou ♥" data-cs="S láskou ♥">S láskou ♥</div>
 </footer>
 
 <script src="assets/script.js"></script>

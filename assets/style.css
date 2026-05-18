@@ -1,5 +1,5 @@
 /* ============================================
-   SVADBA ANNA & TOMÁŠ — 29.8.2026 — STATEK OPAJDA
+   SVADBA VERONIKA & MATÚŠ — 29.8.2026 — STATEK OPAJDA
    Paleta: lúka + slnko (krémová / žltá / zelená)
    ============================================ */
 
@@ -125,6 +125,39 @@ img { max-width: 100%; display: block; }
   transition: 0.3s;
 }
 
+/* ============ LANGUAGE SWITCHER ============ */
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-left: 0.5rem;
+}
+.lang-btn {
+  background: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 4px 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  line-height: 0;
+  opacity: 0.55;
+  transition: opacity .2s, border-color .2s, transform .2s;
+}
+.lang-btn:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+.lang-btn.active {
+  opacity: 1;
+  border-color: var(--accent-1);
+}
+.lang-btn svg {
+  display: block;
+  border: 1px solid rgba(61, 50, 37, 0.15);
+  border-radius: 2px;
+}
+
 @media (max-width: 820px) {
   .nav-links {
     position: fixed;
@@ -140,6 +173,7 @@ img { max-width: 100%; display: block; }
   }
   .nav-links.open { transform: translateY(0); }
   .nav-toggle { display: block; }
+  .lang-switch { margin-left: auto; margin-right: 0.5rem; }
 }
 
 /* ============ HERO ============ */

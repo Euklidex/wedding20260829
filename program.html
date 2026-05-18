@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Program — Veronika & Matúš · 29. 8. 2026</title>
+<title data-sk="Program — Veronika & Matúš · 29. 8. 2026"
+       data-cs="Program — Veronika & Matúš · 29. 8. 2026">Program — Veronika & Matúš · 29. 8. 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -16,32 +17,57 @@
     <a href="index.html" class="nav-logo">Veronika <span class="amp">&</span> Matúš</a>
     <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
     <ul class="nav-links">
-      <li><a href="index.html">Domov</a></li>
-      <li><a href="miesto.html">Miesto</a></li>
-      <li><a href="program.html" class="active">Program</a></li>
-      <li><a href="doprava.html">Doprava & ubytovanie</a></li>
-      <li><a href="praktike.html">Praktické</a></li>
-      <li><a href="rsvp.html">RSVP</a></li>
+      <li><a href="index.html" data-sk="Domov" data-cs="Domů">Domov</a></li>
+      <li><a href="miesto.html" data-sk="Miesto" data-cs="Místo">Miesto</a></li>
+      <li><a href="program.html" class="active" data-sk="Program" data-cs="Program">Program</a></li>
+      <li><a href="doprava.html" data-sk="Doprava & ubytovanie" data-cs="Doprava & ubytování">Doprava & ubytovanie</a></li>
+      <li><a href="prakticke.html" data-sk="Praktické" data-cs="Praktické">Praktické</a></li>
+      <li><a href="rsvp.html" data-sk="RSVP" data-cs="RSVP">RSVP</a></li>
     </ul>
+    <div class="lang-switch">
+      <button class="lang-btn" data-lang="sk" aria-label="Slovenčina" aria-pressed="true">
+        <svg viewBox="0 0 30 18" width="28" height="17" aria-hidden="true">
+          <rect width="30" height="6" y="0" fill="#fff"/>
+          <rect width="30" height="6" y="6" fill="#0b4ea2"/>
+          <rect width="30" height="6" y="12" fill="#ee1c25"/>
+          <path d="M 3 3 L 10 3 L 10 11 C 10 13.5 8.2 14.8 6.5 15.5 C 4.8 14.8 3 13.5 3 11 Z" fill="#ee1c25" stroke="#fff" stroke-width="0.45"/>
+          <path d="M 3.6 11 C 4.2 9.5 4.9 9.5 5.4 10.8 C 5.9 8.8 7.1 8.8 7.6 10.8 C 8.1 9.5 8.8 9.5 9.4 11 L 9.4 13.5 C 8 14.3 5 14.3 3.6 13.5 Z" fill="#0b4ea2"/>
+          <g fill="#fff">
+            <rect x="6.18" y="4.5" width="0.65" height="5.5"/>
+            <rect x="5.2" y="5.7" width="2.6" height="0.6"/>
+            <rect x="4.7" y="7.2" width="3.6" height="0.6"/>
+          </g>
+        </svg>
+      </button>
+      <button class="lang-btn" data-lang="cs" aria-label="Čeština" aria-pressed="false">
+        <svg viewBox="0 0 30 18" width="28" height="17" aria-hidden="true">
+          <rect width="30" height="9" y="0" fill="#fff"/>
+          <rect width="30" height="9" y="9" fill="#d7141a"/>
+          <polygon points="0,0 15,9 0,18" fill="#11457e"/>
+        </svg>
+      </button>
+    </div>
   </div>
 </nav>
 
 <header class="hero inner">
   <div class="hero-bg" style="background-image: url('Opajda_files/svatby_files/150.webp');"></div>
   <div class="hero-content">
-    <div class="eyebrow">Ako bude vyzerať náš deň</div>
-    <h1>Program dňa</h1>
-    <div class="location-tag">Sobota 29. 8. 2026</div>
+    <div class="eyebrow" data-sk="Ako bude vyzerať náš deň" data-cs="Jak bude vypadat náš den">Ako bude vyzerať náš deň</div>
+    <h1 data-sk="Program dňa" data-cs="Program dne">Program dňa</h1>
+    <div class="location-tag" data-sk="Sobota 29. 8. 2026" data-cs="Sobota 29. 8. 2026">Sobota 29. 8. 2026</div>
   </div>
 </header>
 
 <section>
   <div class="section-inner">
     <div class="section-head">
-      <span class="eyebrow">Časový plán</span>
-      <h2>Od popoludnia až do rána</h2>
+      <span class="eyebrow" data-sk="Časový plán" data-cs="Časový plán">Časový plán</span>
+      <h2 data-sk="Od popoludnia až do rána" data-cs="Od odpoledne až do rána">Od popoludnia až do rána</h2>
       <div class="divider"><span>✿</span></div>
-      <p class="lead">
+      <p class="lead"
+         data-sk="Časy sú orientačné — všetko bude prebiehať na statku, takže sa nikam nemusíte ponáhľať."
+         data-cs="Časy jsou orientační — vše bude probíhat na statku, takže nikam nemusíte spěchat.">
         Časy sú orientačné — všetko bude prebiehať na statku, takže sa nikam nemusíte ponáhľať.
       </p>
     </div>
@@ -51,96 +77,107 @@
       <div class="timeline-item">
         <div class="timeline-time">12:30</div>
         <div class="timeline-body">
-          <h3>Príchod hostí</h3>
-          <p>Privítanie na dvore Statku Opajda. Privítací drink, fotka pri vstupe a chvíľa na zoznámenie sa s priestorom.</p>
+          <h3 data-sk="Príchod hostí" data-cs="Příchod hostů">Príchod hostí</h3>
+          <p data-sk="Privítanie na dvore Statku Opajda. Privítací drink, fotka pri vstupe a chvíľa na zoznámenie sa s priestorom."
+             data-cs="Přivítání na dvoře Statku Opajda. Welcome drink, fotka u vstupu a chvíle na seznámení s prostorem.">Privítanie na dvore Statku Opajda. Privítací drink, fotka pri vstupe a chvíľa na zoznámenie sa s priestorom.</p>
         </div>
       </div>
 
       <div class="timeline-item">
         <div class="timeline-time">13:30</div>
         <div class="timeline-body">
-          <h3>Svadobný obrad</h3>
-          <p>Civilný obrad na záhrade pred statkom. Ak by pršalo, presunieme sa pod krytú terasu.</p>
+          <h3 data-sk="Svadobný obrad" data-cs="Svatební obřad">Svadobný obrad</h3>
+          <p data-sk="Civilný obrad na záhrade pred statkom. Ak by pršalo, presunieme sa pod krytú terasu."
+             data-cs="Civilní obřad na zahradě před statkem. Kdyby pršelo, přesuneme se pod krytou terasu.">Civilný obrad na záhrade pred statkom. Ak by pršalo, presunieme sa pod krytú terasu.</p>
         </div>
       </div>
 
       <div class="timeline-item">
         <div class="timeline-time">14:15</div>
         <div class="timeline-body">
-          <h3>Prípitok & gratulácie</h3>
-          <p>Sklenička sektu, fotenie s novomanželmi a chvíľa pre objatia.</p>
+          <h3 data-sk="Prípitok & gratulácie" data-cs="Přípitek & gratulace">Prípitok & gratulácie</h3>
+          <p data-sk="Sklenička sektu, fotenie s novomanželmi a chvíľa pre objatia."
+             data-cs="Sklenička sektu, focení s novomanželi a chvíle na objetí.">Sklenička sektu, fotenie s novomanželmi a chvíľa pre objatia.</p>
         </div>
       </div>
 
       <div class="timeline-item">
         <div class="timeline-time">15:00</div>
         <div class="timeline-body">
-          <h3>Slávnostný obed</h3>
-          <p>Spoločný obed v krčme. Domáca česká kuchyňa, vegetariánska alternatíva pre tých, čo si o ňu povedia v RSVP.</p>
+          <h3 data-sk="Slávnostný obed" data-cs="Slavnostní oběd">Slávnostný obed</h3>
+          <p data-sk="Spoločný obed v krčme. Domáca česká kuchyňa, vegetariánska alternatíva pre tých, čo si o ňu povedia v RSVP."
+             data-cs="Společný oběd v krčmě. Domácí česká kuchyně, vegetariánská alternativa pro ty, kdo si o ni řeknou v RSVP.">Spoločný obed v krčme. Domáca česká kuchyňa, vegetariánska alternatíva pre tých, čo si o ňu povedia v RSVP.</p>
         </div>
       </div>
 
       <div class="timeline-item">
         <div class="timeline-time">17:00</div>
         <div class="timeline-body">
-          <h3>Spoločné fotenie & svadobné hry</h3>
-          <p>Hromadná fotka, prípadne menšie skupinové, a klasické svadobné pošťuchovanie nevesty a ženícha.</p>
+          <h3 data-sk="Spoločné fotenie & svadobné hry" data-cs="Společné focení & svatební hry">Spoločné fotenie & svadobné hry</h3>
+          <p data-sk="Hromadná fotka, prípadne menšie skupinové, a klasické svadobné pošťuchovanie nevesty a ženícha."
+             data-cs="Hromadná fotka, případně menší skupinové, a klasické svatební špičkování nevěsty a ženicha.">Hromadná fotka, prípadne menšie skupinové, a klasické svadobné pošťuchovanie nevesty a ženícha.</p>
         </div>
       </div>
 
       <div class="timeline-item">
         <div class="timeline-time">18:30</div>
         <div class="timeline-body">
-          <h3>Krájanie torty</h3>
-          <p>Sladká pauza — torta, káva, niečo silnejšie pre odvážnych.</p>
+          <h3 data-sk="Krájanie torty" data-cs="Krájení dortu">Krájanie torty</h3>
+          <p data-sk="Sladká pauza — torta, káva, niečo silnejšie pre odvážnych."
+             data-cs="Sladká pauza — dort, káva, něco silnějšího pro odvážné.">Sladká pauza — torta, káva, niečo silnejšie pre odvážnych.</p>
         </div>
       </div>
 
       <div class="timeline-item">
         <div class="timeline-time">19:30</div>
         <div class="timeline-body">
-          <h3>Prvý tanec & otvorenie parketu</h3>
-          <p>Začíname tancom novomanželov, potom je parket otvorený pre všetkých.</p>
+          <h3 data-sk="Prvý tanec & otvorenie parketu" data-cs="První tanec & otevření parketu">Prvý tanec & otvorenie parketu</h3>
+          <p data-sk="Začíname tancom novomanželov, potom je parket otvorený pre všetkých."
+             data-cs="Začínáme tancem novomanželů, potom je parket otevřený pro všechny.">Začíname tancom novomanželov, potom je parket otvorený pre všetkých.</p>
         </div>
       </div>
 
       <div class="timeline-item">
         <div class="timeline-time">21:00</div>
         <div class="timeline-body">
-          <h3>Večerný raut & oheň</h3>
-          <p>Druhá vlna jedla — niečo z grilu, niečo zo studeného stola. Zapaľujeme ohnisko na dvore.</p>
+          <h3 data-sk="Večerný raut & oheň" data-cs="Večerní raut & oheň">Večerný raut & oheň</h3>
+          <p data-sk="Druhá vlna jedla — niečo z grilu, niečo zo studeného stola. Zapaľujeme ohnisko na dvore."
+             data-cs="Druhá vlna jídla — něco z grilu, něco ze studeného stolu. Zapalujeme ohniště na dvoře.">Druhá vlna jedla — niečo z grilu, niečo zo studeného stola. Zapaľujeme ohnisko na dvore.</p>
         </div>
       </div>
 
       <div class="timeline-item">
         <div class="timeline-time">23:00</div>
         <div class="timeline-body">
-          <h3>Tanec do noci</h3>
-          <p>Hudba hrá do tej miery, do akej vládzeme. Statok je náš — kto chce tancovať, tancuje. Kto chce sedieť pri ohni, sedí.</p>
+          <h3 data-sk="Tanec do noci" data-cs="Tanec do noci">Tanec do noci</h3>
+          <p data-sk="Hudba hrá do tej miery, do akej vládzeme. Statok je náš — kto chce tancovať, tancuje. Kto chce sedieť pri ohni, sedí."
+             data-cs="Hudba hraje do té míry, do jaké zvládneme. Statek je náš — kdo chce tancovat, tancuje. Kdo chce sedět u ohně, sedí.">Hudba hrá do tej miery, do akej vládzeme. Statok je náš — kto chce tancovať, tancuje. Kto chce sedieť pri ohni, sedí.</p>
         </div>
       </div>
 
       <div class="timeline-item">
         <div class="timeline-time">02:00</div>
         <div class="timeline-body">
-          <h3>Záver oficiálnej časti</h3>
-          <p>Hudba končí. Statok je však k dispozícii ďalej — kto sa chce zhovárať pri tlmenom svetle, môže.</p>
+          <h3 data-sk="Záver oficiálnej časti" data-cs="Závěr oficiální části">Záver oficiálnej časti</h3>
+          <p data-sk="Hudba končí. Statok je však k dispozícii ďalej — kto sa chce zhovárať pri tlmenom svetle, môže."
+             data-cs="Hudba končí. Statek je však k dispozici dál — kdo se chce bavit při tlumeném světle, může.">Hudba končí. Statok je však k dispozícii ďalej — kto sa chce zhovárať pri tlmenom svetle, môže.</p>
         </div>
       </div>
 
     </div>
 
     <div class="callout mt-3">
-      <h3>Poznámka pre rodičov s deťmi</h3>
-      <p>Statok má veľký dvor a lúky okolo. Detí sa nemusíte báť — bude im tu krásne. V prípade potreby máme aj kúsok pokojnej miestnosti, kde môžu odpočívať.</p>
+      <h3 data-sk="Poznámka pre rodičov s deťmi" data-cs="Poznámka pro rodiče s dětmi">Poznámka pre rodičov s deťmi</h3>
+      <p data-sk="Statok má veľký dvor a lúky okolo. Detí sa nemusíte báť — bude im tu krásne. V prípade potreby máme aj kúsok pokojnej miestnosti, kde môžu odpočívať."
+         data-cs="Statek má velký dvůr a louky okolo. O děti se nebojte — bude jim tu krásně. V případě potřeby máme i kousek klidné místnosti, kde si mohou odpočinout.">Statok má veľký dvor a lúky okolo. Detí sa nemusíte báť — bude im tu krásne. V prípade potreby máme aj kúsok pokojnej miestnosti, kde môžu odpočívať.</p>
     </div>
   </div>
 </section>
 
 <footer>
   <div class="names">Veronika <span class="amp">&</span> Matúš</div>
-  <div>29. 08. 2026 · Statek Opajda</div>
-  <div class="small">S láskou ♥</div>
+  <div data-sk="29. 08. 2026 · Statek Opajda" data-cs="29. 08. 2026 · Statek Opajda">29. 08. 2026 · Statek Opajda</div>
+  <div class="small" data-sk="S láskou ♥" data-cs="S láskou ♥">S láskou ♥</div>
 </footer>
 
 <script src="assets/script.js"></script>

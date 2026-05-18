@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Doprava & ubytovanie — Veronika & Matúš</title>
+<title data-sk="Doprava & ubytovanie — Veronika & Matúš"
+       data-cs="Doprava & ubytování — Veronika & Matúš">Doprava & ubytovanie — Veronika & Matúš</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -16,32 +17,57 @@
     <a href="index.html" class="nav-logo">Veronika <span class="amp">&</span> Matúš</a>
     <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
     <ul class="nav-links">
-      <li><a href="index.html">Domov</a></li>
-      <li><a href="miesto.html">Miesto</a></li>
-      <li><a href="program.html">Program</a></li>
-      <li><a href="doprava.html" class="active">Doprava & ubytovanie</a></li>
-      <li><a href="praktike.html">Praktické</a></li>
-      <li><a href="rsvp.html">RSVP</a></li>
+      <li><a href="index.html" data-sk="Domov" data-cs="Domů">Domov</a></li>
+      <li><a href="miesto.html" data-sk="Miesto" data-cs="Místo">Miesto</a></li>
+      <li><a href="program.html" data-sk="Program" data-cs="Program">Program</a></li>
+      <li><a href="doprava.html" class="active" data-sk="Doprava & ubytovanie" data-cs="Doprava & ubytování">Doprava & ubytovanie</a></li>
+      <li><a href="prakticke.html" data-sk="Praktické" data-cs="Praktické">Praktické</a></li>
+      <li><a href="rsvp.html" data-sk="RSVP" data-cs="RSVP">RSVP</a></li>
     </ul>
+    <div class="lang-switch">
+      <button class="lang-btn" data-lang="sk" aria-label="Slovenčina" aria-pressed="true">
+        <svg viewBox="0 0 30 18" width="28" height="17" aria-hidden="true">
+          <rect width="30" height="6" y="0" fill="#fff"/>
+          <rect width="30" height="6" y="6" fill="#0b4ea2"/>
+          <rect width="30" height="6" y="12" fill="#ee1c25"/>
+          <path d="M 3 3 L 10 3 L 10 11 C 10 13.5 8.2 14.8 6.5 15.5 C 4.8 14.8 3 13.5 3 11 Z" fill="#ee1c25" stroke="#fff" stroke-width="0.45"/>
+          <path d="M 3.6 11 C 4.2 9.5 4.9 9.5 5.4 10.8 C 5.9 8.8 7.1 8.8 7.6 10.8 C 8.1 9.5 8.8 9.5 9.4 11 L 9.4 13.5 C 8 14.3 5 14.3 3.6 13.5 Z" fill="#0b4ea2"/>
+          <g fill="#fff">
+            <rect x="6.18" y="4.5" width="0.65" height="5.5"/>
+            <rect x="5.2" y="5.7" width="2.6" height="0.6"/>
+            <rect x="4.7" y="7.2" width="3.6" height="0.6"/>
+          </g>
+        </svg>
+      </button>
+      <button class="lang-btn" data-lang="cs" aria-label="Čeština" aria-pressed="false">
+        <svg viewBox="0 0 30 18" width="28" height="17" aria-hidden="true">
+          <rect width="30" height="9" y="0" fill="#fff"/>
+          <rect width="30" height="9" y="9" fill="#d7141a"/>
+          <polygon points="0,0 15,9 0,18" fill="#11457e"/>
+        </svg>
+      </button>
+    </div>
   </div>
 </nav>
 
 <header class="hero inner">
   <div class="hero-bg" style="background-image: url('Opajda_files/Opajda_files/211.webp');"></div>
   <div class="hero-content">
-    <div class="eyebrow">Ako sa k nám dostať</div>
-    <h1>Doprava & ubytovanie</h1>
-    <div class="location-tag">Horní Rožínka, Vysočina</div>
+    <div class="eyebrow" data-sk="Ako sa k nám dostať" data-cs="Jak se k nám dostat">Ako sa k nám dostať</div>
+    <h1 data-sk="Doprava & ubytovanie" data-cs="Doprava & ubytování">Doprava & ubytovanie</h1>
+    <div class="location-tag" data-sk="Horní Rožínka, Vysočina" data-cs="Horní Rožínka, Vysočina">Horní Rožínka, Vysočina</div>
   </div>
 </header>
 
 <section>
   <div class="section-inner">
     <div class="section-head">
-      <span class="eyebrow">Mapa</span>
-      <h2>Kde nás nájdete</h2>
+      <span class="eyebrow" data-sk="Mapa" data-cs="Mapa">Mapa</span>
+      <h2 data-sk="Kde nás nájdete" data-cs="Kde nás najdete">Kde nás nájdete</h2>
       <div class="divider"><span>✿</span></div>
-      <p class="lead">Statek Opajda · Horní Rožínka 4 · 592 51 Dolní Rožínka</p>
+      <p class="lead"
+         data-sk="Statek Opajda · Horní Rožínka 4 · 592 51 Dolní Rožínka"
+         data-cs="Statek Opajda · Horní Rožínka 4 · 592 51 Dolní Rožínka">Statek Opajda · Horní Rožínka 4 · 592 51 Dolní Rožínka</p>
     </div>
 
     <iframe
@@ -53,39 +79,48 @@
     </iframe>
 
     <p class="center">
-      <a href="https://www.google.com/maps/dir/?api=1&destination=Statek+Opajda+Horn%C3%AD+Ro%C5%BE%C3%ADnka+4" target="_blank" rel="noopener" class="btn btn-outline">Otvoriť navigáciu</a>
+      <a href="https://www.google.com/maps/dir/?api=1&destination=Statek+Opajda+Horn%C3%AD+Ro%C5%BE%C3%ADnka+4" target="_blank" rel="noopener" class="btn btn-outline"
+         data-sk="Otvoriť navigáciu" data-cs="Otevřít navigaci">Otvoriť navigáciu</a>
     </p>
 
     <div class="section-head mt-3">
-      <span class="eyebrow">Možnosti dopravy</span>
-      <h2>Ako sa k nám dostanete</h2>
+      <span class="eyebrow" data-sk="Možnosti dopravy" data-cs="Možnosti dopravy">Možnosti dopravy</span>
+      <h2 data-sk="Ako sa k nám dostanete" data-cs="Jak se k nám dostanete">Ako sa k nám dostanete</h2>
     </div>
 
     <div class="info-grid">
 
       <div class="info-block">
-        <h3><span class="icon">🚗</span> Autom</h3>
-        <p>
+        <h3 data-sk-html="<span class=&quot;icon&quot;>🚗</span> Autom"
+            data-cs-html="<span class=&quot;icon&quot;>🚗</span> Autem"><span class="icon">🚗</span> Autom</h3>
+        <p data-sk-html="Z Brna ~70 km cez D1 a Žďár nad Sázavou (cca 1 hodina).<br>Z Prahy ~165 km cez D1 (cca 2 hodiny).<br>Z Bratislavy ~200 km cez Brno (cca 2:15 h)."
+           data-cs-html="Z Brna ~70 km přes D1 a Žďár nad Sázavou (cca 1 hodina).<br>Z Prahy ~165 km přes D1 (cca 2 hodiny).<br>Z Bratislavy ~200 km přes Brno (cca 2:15 h).">
           Z Brna ~70 km cez D1 a Žďár nad Sázavou (cca 1 hodina).<br>
           Z Prahy ~165 km cez D1 (cca 2 hodiny).<br>
           Z Bratislavy ~200 km cez Brno (cca 2:15 h).
         </p>
-        <p><strong>Parkovanie:</strong> priamo pri statku, zdarma a v dostatočnom množstve.</p>
+        <p data-sk-html="<strong>Parkovanie:</strong> priamo pri statku, zdarma a v dostatočnom množstve."
+           data-cs-html="<strong>Parkování:</strong> přímo u statku, zdarma a v dostatečném množství."><strong>Parkovanie:</strong> priamo pri statku, zdarma a v dostatočnom množstve.</p>
       </div>
 
       <div class="info-block">
-        <h3><span class="icon">🚆</span> Vlakom + autobus</h3>
-        <p>
+        <h3 data-sk-html="<span class=&quot;icon&quot;>🚆</span> Vlakom + autobus"
+            data-cs-html="<span class=&quot;icon&quot;>🚆</span> Vlakem + autobus"><span class="icon">🚆</span> Vlakom + autobus</h3>
+        <p data-sk-html="Najbližšia železničná stanica je <strong>Bystřice nad Pernštejnem</strong> (~10 km). Odtiaľ buď autobus do Dolní Rožínky, alebo radšej taxi — rýchlejšie a pohodlnejšie."
+           data-cs-html="Nejbližší železniční stanice je <strong>Bystřice nad Pernštejnem</strong> (~10 km). Odtud buď autobus do Dolní Rožínky, nebo raději taxi — rychlejší a pohodlnější.">
           Najbližšia železničná stanica je <strong>Bystřice nad Pernštejnem</strong>
           (~10 km). Odtiaľ buď autobus do Dolní Rožínky, alebo radšej taxi —
           rýchlejšie a pohodlnejšie.
         </p>
-        <p>Spojenia odporúčam pozrieť na <a href="https://idos.cz" target="_blank" rel="noopener">IDOS.cz</a>.</p>
+        <p data-sk-html="Spojenia odporúčam pozrieť na <a href=&quot;https://idos.cz&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>IDOS.cz</a>."
+           data-cs-html="Spojení doporučuji podívat se na <a href=&quot;https://idos.cz&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>IDOS.cz</a>.">Spojenia odporúčam pozrieť na <a href="https://idos.cz" target="_blank" rel="noopener">IDOS.cz</a>.</p>
       </div>
 
       <div class="info-block">
-        <h3><span class="icon">🚐</span> Spoločná doprava</h3>
-        <p>
+        <h3 data-sk-html="<span class=&quot;icon&quot;>🚐</span> Spoločná doprava"
+            data-cs-html="<span class=&quot;icon&quot;>🚐</span> Společná doprava"><span class="icon">🚐</span> Spoločná doprava</h3>
+        <p data-sk="Ak máte záujem o spoločnú dopravu (zhromaždíme sa, ideme spolu), dajte nám to vedieť v RSVP — podľa počtu zorganizujeme buď mikrobus, alebo jazdy s rezervovaným miestom."
+           data-cs="Pokud máte zájem o společnou dopravu (sejdeme se, jedeme spolu), dejte nám to vědět v RSVP — podle počtu zorganizujeme buď mikrobus, nebo jízdy s rezervovaným místem.">
           Ak máte záujem o spoločnú dopravu (zhromaždíme sa, ideme spolu), dajte
           nám to vedieť v RSVP — podľa počtu zorganizujeme buď mikrobus,
           alebo jazdy s rezervovaným miestom.
@@ -95,26 +130,33 @@
     </div>
 
     <div class="section-head mt-3">
-      <span class="eyebrow">Kde prespať</span>
-      <h2>Ubytovanie</h2>
-      <p class="lead">Tancujte do rána — ráno nech vás len krátka cesta delí od postele.</p>
+      <span class="eyebrow" data-sk="Kde prespať" data-cs="Kde přespat">Kde prespať</span>
+      <h2 data-sk="Ubytovanie" data-cs="Ubytování">Ubytovanie</h2>
+      <p class="lead"
+         data-sk="Tancujte do rána — ráno nech vás len krátka cesta delí od postele."
+         data-cs="Tancujte do rána — ráno ať vás od postele dělí jen krátká cesta.">Tancujte do rána — ráno nech vás len krátka cesta delí od postele.</p>
     </div>
 
     <div class="info-grid">
 
       <div class="info-block">
-        <h3><span class="icon">🛏</span> Priamo na statku</h3>
-        <p>
+        <h3 data-sk-html="<span class=&quot;icon&quot;>🛏</span> Priamo na statku"
+            data-cs-html="<span class=&quot;icon&quot;>🛏</span> Přímo na statku"><span class="icon">🛏</span> Priamo na statku</h3>
+        <p data-sk="Statek Opajda má vlastné ubytovanie v izbách aj v podkroví — kapacita je obmedzená, preto si ju nárokujeme prednostne pre rodinu a najbližších priateľov."
+           data-cs="Statek Opajda má vlastní ubytování v pokojích i v podkroví — kapacita je omezená, proto si ji nárokujeme přednostně pro rodinu a nejbližší přátele.">
           Statek Opajda má vlastné ubytovanie v izbách aj v podkroví — kapacita
           je obmedzená, preto si ju nárokujeme prednostne pre rodinu
           a najbližších priateľov.
         </p>
-        <p>Ak máte záujem o izbu na statku, vyznačte to v RSVP — ozveme sa s detailmi.</p>
+        <p data-sk="Ak máte záujem o izbu na statku, vyznačte to v RSVP — ozveme sa s detailmi."
+           data-cs="Pokud máte zájem o pokoj na statku, vyznačte to v RSVP — ozveme se s detaily.">Ak máte záujem o izbu na statku, vyznačte to v RSVP — ozveme sa s detailmi.</p>
       </div>
 
       <div class="info-block">
-        <h3><span class="icon">🏨</span> V okolí (do 10 km)</h3>
-        <p>
+        <h3 data-sk-html="<span class=&quot;icon&quot;>🏨</span> V okolí (do 10 km)"
+            data-cs-html="<span class=&quot;icon&quot;>🏨</span> V okolí (do 10 km)"><span class="icon">🏨</span> V okolí (do 10 km)</h3>
+        <p data-sk-html="<strong>Bystřice nad Pernštejnem</strong> — pár hotelov a penziónov, cca 15 minút autom.<br><strong>Nedvědice / Pernštejn</strong> — penzióny so zámockou kulisou, cca 20 minút.<br>Pri rezervácii spomeňte „svadba Opajda", v niektorých penziónoch máme prednostnú zľavu."
+           data-cs-html="<strong>Bystřice nad Pernštejnem</strong> — pár hotelů a penzionů, cca 15 minut autem.<br><strong>Nedvědice / Pernštejn</strong> — penziony se zámeckou kulisou, cca 20 minut.<br>Při rezervaci zmiňte „svatba Opajda", v některých penzionech máme přednostní slevu.">
           <strong>Bystřice nad Pernštejnem</strong> — pár hotelov a penziónov, cca 15 minút autom.<br>
           <strong>Nedvědice / Pernštejn</strong> — penzióny so zámockou kulisou, cca 20 minút.<br>
           Pri rezervácii spomeňte „svadba Opajda", v niektorých penziónoch máme prednostnú zľavu.
@@ -122,8 +164,10 @@
       </div>
 
       <div class="info-block">
-        <h3><span class="icon">⛺</span> Stanom v okolí</h3>
-        <p>
+        <h3 data-sk-html="<span class=&quot;icon&quot;>⛺</span> Stanom v okolí"
+            data-cs-html="<span class=&quot;icon&quot;>⛺</span> Stanem v okolí"><span class="icon">⛺</span> Stanom v okolí</h3>
+        <p data-sk="Ak máte radi tábory pod hviezdami, je možnosť postaviť stan blízko statku (v lúke pri rybníku). Sprchu vyriešime na statku. Tiež si to vyznačte v RSVP."
+           data-cs="Pokud máte rádi tábory pod hvězdami, je možnost postavit stan poblíž statku (na louce u rybníka). Sprchu vyřešíme na statku. Také si to vyznačte v RSVP.">
           Ak máte radi tábory pod hviezdami, je možnosť postaviť stan blízko statku
           (v lúke pri rybníku). Sprchu vyriešime na statku. Tiež si to vyznačte v RSVP.
         </p>
@@ -132,16 +176,17 @@
     </div>
 
     <div class="callout mt-3">
-      <h3>Vrátenie domov</h3>
-      <p>Pre tých, čo sa budú vracať autom v noci alebo skoro ráno, organizujeme zoznam jázd a kapacít — opäť to ošetríme cez RSVP a potom spoločne dáme dokopy.</p>
+      <h3 data-sk="Vrátenie domov" data-cs="Návrat domů">Vrátenie domov</h3>
+      <p data-sk="Pre tých, čo sa budú vracať autom v noci alebo skoro ráno, organizujeme zoznam jázd a kapacít — opäť to ošetríme cez RSVP a potom spoločne dáme dokopy."
+         data-cs="Pro ty, kdo se budou vracet autem v noci nebo brzo ráno, organizujeme seznam jízd a kapacit — opět to ošetříme přes RSVP a pak společně dáme dohromady.">Pre tých, čo sa budú vracať autom v noci alebo skoro ráno, organizujeme zoznam jázd a kapacít — opäť to ošetríme cez RSVP a potom spoločne dáme dokopy.</p>
     </div>
   </div>
 </section>
 
 <footer>
   <div class="names">Veronika <span class="amp">&</span> Matúš</div>
-  <div>29. 08. 2026 · Statek Opajda</div>
-  <div class="small">S láskou ♥</div>
+  <div data-sk="29. 08. 2026 · Statek Opajda" data-cs="29. 08. 2026 · Statek Opajda">29. 08. 2026 · Statek Opajda</div>
+  <div class="small" data-sk="S láskou ♥" data-cs="S láskou ♥">S láskou ♥</div>
 </footer>
 
 <script src="assets/script.js"></script>

@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Miesto — Statek Opajda · Veronika & Matúš</title>
+<title data-sk="Miesto — Statek Opajda · Veronika & Matúš"
+       data-cs="Místo — Statek Opajda · Veronika & Matúš">Miesto — Statek Opajda · Veronika & Matúš</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -16,44 +17,69 @@
     <a href="index.html" class="nav-logo">Veronika <span class="amp">&</span> Matúš</a>
     <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
     <ul class="nav-links">
-      <li><a href="index.html">Domov</a></li>
-      <li><a href="miesto.html" class="active">Miesto</a></li>
-      <li><a href="program.html">Program</a></li>
-      <li><a href="doprava.html">Doprava & ubytovanie</a></li>
-      <li><a href="praktike.html">Praktické</a></li>
-      <li><a href="rsvp.html">RSVP</a></li>
+      <li><a href="index.html" data-sk="Domov" data-cs="Domů">Domov</a></li>
+      <li><a href="miesto.html" class="active" data-sk="Miesto" data-cs="Místo">Miesto</a></li>
+      <li><a href="program.html" data-sk="Program" data-cs="Program">Program</a></li>
+      <li><a href="doprava.html" data-sk="Doprava & ubytovanie" data-cs="Doprava & ubytování">Doprava & ubytovanie</a></li>
+      <li><a href="prakticke.html" data-sk="Praktické" data-cs="Praktické">Praktické</a></li>
+      <li><a href="rsvp.html" data-sk="RSVP" data-cs="RSVP">RSVP</a></li>
     </ul>
+    <div class="lang-switch">
+      <button class="lang-btn" data-lang="sk" aria-label="Slovenčina" aria-pressed="true">
+        <svg viewBox="0 0 30 18" width="28" height="17" aria-hidden="true">
+          <rect width="30" height="6" y="0" fill="#fff"/>
+          <rect width="30" height="6" y="6" fill="#0b4ea2"/>
+          <rect width="30" height="6" y="12" fill="#ee1c25"/>
+          <path d="M 3 3 L 10 3 L 10 11 C 10 13.5 8.2 14.8 6.5 15.5 C 4.8 14.8 3 13.5 3 11 Z" fill="#ee1c25" stroke="#fff" stroke-width="0.45"/>
+          <path d="M 3.6 11 C 4.2 9.5 4.9 9.5 5.4 10.8 C 5.9 8.8 7.1 8.8 7.6 10.8 C 8.1 9.5 8.8 9.5 9.4 11 L 9.4 13.5 C 8 14.3 5 14.3 3.6 13.5 Z" fill="#0b4ea2"/>
+          <g fill="#fff">
+            <rect x="6.18" y="4.5" width="0.65" height="5.5"/>
+            <rect x="5.2" y="5.7" width="2.6" height="0.6"/>
+            <rect x="4.7" y="7.2" width="3.6" height="0.6"/>
+          </g>
+        </svg>
+      </button>
+      <button class="lang-btn" data-lang="cs" aria-label="Čeština" aria-pressed="false">
+        <svg viewBox="0 0 30 18" width="28" height="17" aria-hidden="true">
+          <rect width="30" height="9" y="0" fill="#fff"/>
+          <rect width="30" height="9" y="9" fill="#d7141a"/>
+          <polygon points="0,0 15,9 0,18" fill="#11457e"/>
+        </svg>
+      </button>
+    </div>
   </div>
 </nav>
 
 <header class="hero inner">
   <div class="hero-bg" style="background-image: url('Opajda_files/Opajda_files/205.webp');"></div>
   <div class="hero-content">
-    <div class="eyebrow">Kde sa to celé udeje</div>
+    <div class="eyebrow" data-sk="Kde sa to celé udeje" data-cs="Kde se to celé odehraje">Kde sa to celé udeje</div>
     <h1>Statek Opajda</h1>
-    <div class="location-tag">Horní Rožínka · Vysočina</div>
+    <div class="location-tag" data-sk="Horní Rožínka · Vysočina" data-cs="Horní Rožínka · Vysočina">Horní Rožínka · Vysočina</div>
   </div>
 </header>
 
 <section>
   <div class="section-inner">
     <div class="section-head">
-      <span class="eyebrow">O mieste</span>
-      <h2>Starý statok, ktorý dýcha pohodou</h2>
+      <span class="eyebrow" data-sk="O mieste" data-cs="O místě">O mieste</span>
+      <h2 data-sk="Starý statok, ktorý dýcha pohodou" data-cs="Starý statek, který dýchá pohodou">Starý statok, ktorý dýcha pohodou</h2>
       <div class="divider"><span>✿</span></div>
     </div>
 
     <div class="two-col">
       <div class="img-block" style="background-image: url('Opajda_files/Opajda_files/201.webp');"></div>
       <div>
-        <h3>Kameň, drevo a vôňa leta</h3>
-        <p>
+        <h3 data-sk="Kameň, drevo a vôňa leta" data-cs="Kámen, dřevo a vůně léta">Kameň, drevo a vôňa leta</h3>
+        <p data-sk="Statek Opajda je zrekonštruovaný roľnícky dvorec uprostred Vysočiny. Tehlové strechy, kamenné múry, drevené trámy a lampáše večer — všetko to dohromady vytvára atmosféru, kde sa čas spomalí a človek si konečne oddýchne."
+           data-cs="Statek Opajda je zrekonstruovaný selský dvorec uprostřed Vysočiny. Cihlové střechy, kamenné zdi, dřevěné trámy a lampáše večer — vše dohromady vytváří atmosféru, ve které se čas zpomalí a člověk si konečně odpočine.">
           Statek Opajda je zrekonštruovaný roľnícky dvorec uprostred Vysočiny.
           Tehlové strechy, kamenné múry, drevené trámy a lampáše večer — všetko
           to dohromady vytvára atmosféru, kde sa čas spomalí a človek si konečne
           oddýchne.
         </p>
-        <p>
+        <p data-sk="Pre nás je to miesto, kde sme sa zaľúbili do myšlienky stráviť tu náš najdôležitejší deň. Verím, že ho s nami budete mať radi rovnako."
+           data-cs="Pro nás je to místo, kde jsme se zamilovali do myšlenky strávit tu náš nejdůležitější den. Věřím, že ho s námi budete mít rádi stejně.">
           Pre nás je to miesto, kde sme sa zaľúbili do myšlienky stráviť tu náš
           najdôležitejší deň. Verím, že ho s nami budete mať radi rovnako.
         </p>
@@ -63,14 +89,16 @@
     <div class="two-col reverse mt-3">
       <div class="img-block" style="background-image: url('Opajda_files/Statek_files/43.webp');"></div>
       <div>
-        <h3>Rybník, terasa, ohnisko</h3>
-        <p>
+        <h3 data-sk="Rybník, terasa, ohnisko" data-cs="Rybník, terasa, ohniště">Rybník, terasa, ohnisko</h3>
+        <p data-sk="Areál ponúka veľkú vnútornú krčmu so stenami z kameňa, krytú terasu s ohniskom, dvor s posedením, vlastný rybník a všade naokolo lúky a stromy. Pre deti je tu priestoru viac než dosť — vrátane koní, ktoré sa po dvore voľne pasú."
+           data-cs="Areál nabízí velkou vnitřní krčmu se stěnami z kamene, krytou terasu s ohništěm, dvůr s posezením, vlastní rybník a všude okolo louky a stromy. Pro děti je tu prostoru víc než dost — včetně koní, kteří se po dvoře volně pasou.">
           Areál ponúka veľkú vnútornú krčmu so stenami z kameňa, krytú terasu
           s ohniskom, dvor s posedením, vlastný rybník a všade naokolo lúky
           a stromy. Pre deti je tu priestoru viac než dosť — vrátane koní,
           ktoré sa po dvore voľne pasú.
         </p>
-        <p>
+        <p data-sk="V skratke — všetko, čo na svadbu v lete potrebujete: stôl pod hviezdami, oheň, zeleň a pokoj."
+           data-cs="Ve zkratce — vše, co na svatbu v létě potřebujete: stůl pod hvězdami, oheň, zeleň a klid.">
           V skratke — všetko, čo na svadbu v lete potrebujete: stôl pod
           hviezdami, oheň, zeleň a pokoj.
         </p>
@@ -78,14 +106,18 @@
     </div>
 
     <div class="callout mt-3">
-      <h3>Adresa</h3>
-      <p style="font-size: 1.15rem; margin-bottom: 0.4rem;">Statek Opajda · Horní Rožínka 4 · 592 51 Dolní Rožínka</p>
-      <p style="font-size: 0.95rem; opacity: 0.85;">Kraj Vysočina · Česká republika</p>
+      <h3 data-sk="Adresa" data-cs="Adresa">Adresa</h3>
+      <p style="font-size: 1.15rem; margin-bottom: 0.4rem;"
+         data-sk="Statek Opajda · Horní Rožínka 4 · 592 51 Dolní Rožínka"
+         data-cs="Statek Opajda · Horní Rožínka 4 · 592 51 Dolní Rožínka">Statek Opajda · Horní Rožínka 4 · 592 51 Dolní Rožínka</p>
+      <p style="font-size: 0.95rem; opacity: 0.85;"
+         data-sk="Kraj Vysočina · Česká republika"
+         data-cs="Kraj Vysočina · Česká republika">Kraj Vysočina · Česká republika</p>
     </div>
 
     <div class="section-head mt-3">
-      <span class="eyebrow">Pár záberov</span>
-      <h2>Atmosféra miesta</h2>
+      <span class="eyebrow" data-sk="Pár záberov" data-cs="Pár záběrů">Pár záberov</span>
+      <h2 data-sk="Atmosféra miesta" data-cs="Atmosféra místa">Atmosféra miesta</h2>
     </div>
 
     <div class="gallery">
@@ -99,7 +131,9 @@
       <div class="gallery-item" style="background-image: url('Opajda_files/svatby_files/107.webp');"></div>
     </div>
 
-    <p class="center mt-3" style="color: var(--text-soft); font-style: italic;">
+    <p class="center mt-3" style="color: var(--text-soft); font-style: italic;"
+       data-sk-html="Fotografie © <a href=&quot;https://www.opajda.cz&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>opajda.cz</a>"
+       data-cs-html="Fotografie © <a href=&quot;https://www.opajda.cz&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>opajda.cz</a>">
       Fotografie © <a href="https://www.opajda.cz" target="_blank" rel="noopener">opajda.cz</a>
     </p>
   </div>
@@ -107,8 +141,8 @@
 
 <footer>
   <div class="names">Veronika <span class="amp">&</span> Matúš</div>
-  <div>29. 08. 2026 · Statek Opajda</div>
-  <div class="small">S láskou ♥</div>
+  <div data-sk="29. 08. 2026 · Statek Opajda" data-cs="29. 08. 2026 · Statek Opajda">29. 08. 2026 · Statek Opajda</div>
+  <div class="small" data-sk="S láskou ♥" data-cs="S láskou ♥">S láskou ♥</div>
 </footer>
 
 <script src="assets/script.js"></script>
