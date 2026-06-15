@@ -42,11 +42,12 @@ python -m http.server 8000
 
 ```
 wedding20260829/
-├── index.html        # Domovská stránka — hero, countdown, prehľad sekcií
+├── index.html        # ⚠️ AKTUÁLNE = dočasná „pracujeme na webe" stránka (viď poznámku nižšie)
+├── index-full.html   # Skutočná domovská stránka — hero, countdown, prehľad sekcií
 ├── miesto.html       # Statek Opajda — popis, adresa, galéria
 ├── program.html      # Časový plán dňa (12:30 → 02:00)
 ├── doprava.html      # Mapa, ako sa dostať, ubytovanie
-├── prakticke.html     # Dress code, darčeky, galéria, FAQ
+├── prakticke.html    # Dress code, darčeky, galéria, FAQ
 ├── rsvp.html         # Odkaz na Google Forms + zoznam otázok + kontakty
 ├── assets/
 │   ├── style.css     # Všetky štýly, CSS premenné na začiatku (paleta)
@@ -59,6 +60,20 @@ wedding20260829/
     ├── svatby_files/
     └── ikony/
 ```
+
+### ⚠️ Dočasná zámena: `index.html` ↔ `index-full.html`
+
+Kým web nie je hotový, **`index.html` je dočasná „pracujeme na webe" placeholder stránka**. Skutočná domovská stránka je uložená ako **`index-full.html`** a čaká na svoj návrat.
+
+**Nasadenie na doménu počas prípravy:** nahraj LEN súbory potrebné pre placeholder — `index.html`, `assets/style.css`, `assets/script.js`, `files/wedding_edited.png`. Ostatné HTML stránky (miesto, program, doprava, prakticke, rsvp) v tejto fáze **nenasadzuj**, lebo by hostia mohli prísť priamo na ne a videli by „rozrobený" web.
+
+**Návrat k plnej verzii** (keď bude všetko hotové): premenuj naspäť, ideálne cez git:
+```
+git mv index.html priprava.html      # alebo zmaž ak už netreba
+git mv index-full.html index.html
+```
+
+Vnútorné odkazy v ostatných HTML stránkach (`<a href="index.html">`) ostávajú zámerne nezmenené — po spätnom premenovaní budú opäť ukazovať na správnu domovskú stránku.
 
 ### Spoločné prvky všetkých HTML stránok
 Každá stránka má **rovnakú navigáciu** (`<nav class="nav">`) a **rovnakú pätu** (`<footer>`). Pri zmene v jednej stránke (napr. pridanie novej sekcie do navigácie) musíš zmenu **premietnuť do všetkých 6 HTML súborov**.

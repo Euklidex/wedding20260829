@@ -3,66 +3,95 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title data-sk="Veronika & Matúš — 29. 8. 2026 — Statek Opajda"
-       data-cs="Veronika & Matúš — 29. 8. 2026 — Statek Opajda">Veronika & Matúš — 29. 8. 2026 — Statek Opajda</title>
+<title data-sk="Veronika & Matúš — Čoskoro"
+       data-cs="Veronika & Matúš — Brzy">Veronika & Matúš — Čoskoro</title>
 <meta name="description"
-      data-sk="Pozvánka na svadbu Veroniky a Matúša — 29. augusta 2026 na Statku Opajda."
-      data-cs="Pozvánka na svatbu Veroniky a Matúše — 29. srpna 2026 na Statku Opajda."
-      content="Pozvánka na svadbu Veroniky a Matúša — 29. augusta 2026 na Statku Opajda.">
+      data-sk="Pripravujeme svadobný web pre svadbu Veroniky a Matúša — 29. augusta 2026 na Statku Opajda."
+      data-cs="Připravujeme svatební web pro svatbu Veroniky a Matúše — 29. srpna 2026 na Statku Opajda."
+      content="Pripravujeme svadobný web pre svadbu Veroniky a Matúša — 29. augusta 2026 na Statku Opajda.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
+<style>
+  /* Layout úprav pre samostatnú prípravovú stránku (žiadna nav) */
+  body.page-temp .hero { min-height: 100vh; }
+  body.page-temp .temp-lang {
+    position: fixed;
+    top: 1.2rem;
+    right: 1.2rem;
+    z-index: 20;
+    display: flex;
+    gap: 0.4rem;
+    padding: 6px 8px;
+    background: rgba(255, 253, 245, 0.85);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+  }
+  body.page-temp .temp-notice {
+    margin: 2.2rem auto 0;
+    max-width: 560px;
+    padding: 1.25rem 1.5rem;
+    background: rgba(255, 248, 229, 0.12);
+    border: 1px solid rgba(255, 248, 229, 0.35);
+    border-radius: var(--radius);
+    backdrop-filter: blur(4px);
+    color: #FFF8E5;
+  }
+  body.page-temp .temp-notice p {
+    margin: 0;
+    font-size: 1.02rem;
+    line-height: 1.6;
+  }
+  body.page-temp .temp-notice strong { color: var(--accent-1); font-weight: 600; }
+  @media (max-width: 600px) {
+    body.page-temp .temp-lang { top: 0.8rem; right: 0.8rem; }
+    body.page-temp .temp-notice { margin: 1.5rem 1rem 0; padding: 1rem 1.1rem; }
+  }
+</style>
 </head>
-<body>
+<body class="page-temp">
 
-<nav class="nav">
-  <div class="nav-inner">
-    <a href="index.html" class="nav-logo">Veronika <span class="amp">&</span> Matúš</a>
-    <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
-    <ul class="nav-links">
-      <li><a href="index.html" class="active" data-sk="Domov" data-cs="Domů">Domov</a></li>
-      <li><a href="miesto.html" data-sk="Miesto" data-cs="Místo">Miesto</a></li>
-      <li><a href="program.html" data-sk="Program" data-cs="Program">Program</a></li>
-      <li><a href="doprava.html" data-sk="Doprava & ubytovanie" data-cs="Doprava & ubytování">Doprava & ubytovanie</a></li>
-      <li><a href="prakticke.html" data-sk="Praktické" data-cs="Praktické">Praktické</a></li>
-      <li><a href="rsvp.html" data-sk="RSVP" data-cs="RSVP">RSVP</a></li>
-    </ul>
-    <div class="lang-switch">
-      <button class="lang-btn" data-lang="sk" aria-label="Slovenčina" aria-pressed="true">
-        <svg viewBox="0 0 30 18" width="28" height="17" aria-hidden="true">
-          <rect width="30" height="6" y="0" fill="#fff"/>
-          <rect width="30" height="6" y="6" fill="#0b4ea2"/>
-          <rect width="30" height="6" y="12" fill="#ee1c25"/>
-          <path d="M 3 3 L 10 3 L 10 11 C 10 13.5 8.2 14.8 6.5 15.5 C 4.8 14.8 3 13.5 3 11 Z" fill="#ee1c25" stroke="#fff" stroke-width="0.45"/>
-          <path d="M 3.6 11 C 4.2 9.5 4.9 9.5 5.4 10.8 C 5.9 8.8 7.1 8.8 7.6 10.8 C 8.1 9.5 8.8 9.5 9.4 11 L 9.4 13.5 C 8 14.3 5 14.3 3.6 13.5 Z" fill="#0b4ea2"/>
-          <g fill="#fff">
-            <rect x="6.18" y="4.5" width="0.65" height="5.5"/>
-            <rect x="5.2" y="5.7" width="2.6" height="0.6"/>
-            <rect x="4.7" y="7.2" width="3.6" height="0.6"/>
-          </g>
-        </svg>
-      </button>
-      <button class="lang-btn" data-lang="cs" aria-label="Čeština" aria-pressed="false">
-        <svg viewBox="0 0 30 18" width="28" height="17" aria-hidden="true">
-          <rect width="30" height="9" y="0" fill="#fff"/>
-          <rect width="30" height="9" y="9" fill="#d7141a"/>
-          <polygon points="0,0 15,9 0,18" fill="#11457e"/>
-        </svg>
-      </button>
-    </div>
-  </div>
-</nav>
+<div class="temp-lang">
+  <button class="lang-btn" data-lang="sk" aria-label="Slovenčina" aria-pressed="true">
+    <svg viewBox="0 0 30 18" width="28" height="17" aria-hidden="true">
+      <rect width="30" height="6" y="0" fill="#fff"/>
+      <rect width="30" height="6" y="6" fill="#0b4ea2"/>
+      <rect width="30" height="6" y="12" fill="#ee1c25"/>
+      <path d="M 3 3 L 10 3 L 10 11 C 10 13.5 8.2 14.8 6.5 15.5 C 4.8 14.8 3 13.5 3 11 Z" fill="#ee1c25" stroke="#fff" stroke-width="0.45"/>
+      <path d="M 3.6 11 C 4.2 9.5 4.9 9.5 5.4 10.8 C 5.9 8.8 7.1 8.8 7.6 10.8 C 8.1 9.5 8.8 9.5 9.4 11 L 9.4 13.5 C 8 14.3 5 14.3 3.6 13.5 Z" fill="#0b4ea2"/>
+      <g fill="#fff">
+        <rect x="6.18" y="4.5" width="0.65" height="5.5"/>
+        <rect x="5.2" y="5.7" width="2.6" height="0.6"/>
+        <rect x="4.7" y="7.2" width="3.6" height="0.6"/>
+      </g>
+    </svg>
+  </button>
+  <button class="lang-btn" data-lang="cs" aria-label="Čeština" aria-pressed="false">
+    <svg viewBox="0 0 30 18" width="28" height="17" aria-hidden="true">
+      <rect width="30" height="9" y="0" fill="#fff"/>
+      <rect width="30" height="9" y="9" fill="#d7141a"/>
+      <polygon points="0,0 15,9 0,18" fill="#11457e"/>
+    </svg>
+  </button>
+</div>
 
 <header class="hero">
   <div class="hero-bg" style="background-image: url('files/wedding_edited.png');"></div>
   <div class="hero-content">
-    <div class="eyebrow" data-sk="Tešíme sa na vás" data-cs="Těšíme se na vás">Tešíme sa na vás</div>
+    <div class="eyebrow" data-sk="Veľký deň sa blíži" data-cs="Velký den se blíží">Veľký deň sa blíži</div>
     <h1>Veronika <span class="amp">&</span> Matúš</h1>
     <div class="date">29 · 08 · 2026</div>
     <div class="location-tag" data-sk="Statek Opajda · Vysočina" data-cs="Statek Opajda · Vysočina">Statek Opajda · Vysočina</div>
+
+    <div class="temp-notice">
+      <p data-sk-html="Na svadobnom webe ešte pracujeme. <strong>Čoskoro tu pribudne všetko</strong>, čo budete potrebovať — miesto, program, doprava, ubytovanie aj RSVP."
+         data-cs-html="Na svatebním webu ještě pracujeme. <strong>Brzy zde přibude vše</strong>, co budete potřebovat — místo, program, doprava, ubytování i RSVP.">
+        Na svadobnom webe ešte pracujeme. <strong>Čoskoro tu pribudne všetko</strong>, čo budete potrebovať — miesto, program, doprava, ubytovanie aj RSVP.
+      </p>
+    </div>
   </div>
-  <div class="scroll-cue" data-sk="Posuň ▾" data-cs="Posuň ▾">Posuň ▾</div>
 </header>
 
 <section class="countdown-wrap">
@@ -75,100 +104,10 @@
   </div>
 </section>
 
-<section>
-  <div class="section-inner center">
-    <div class="section-head">
-      <span class="eyebrow" data-sk="Pozvánka" data-cs="Pozvánka">Pozvánka</span>
-      <h2 data-sk="Berieme sa." data-cs="Bereme se.">Berieme sa.</h2>
-      <div class="divider"><span>✿</span></div>
-      <p class="lead"
-         data-sk="Po rokoch spoločných ciest, prebdených nocí a smiechu, ktorý nepoznal medze, sme sa rozhodli povedať si áno. A nič nás nepoteší viac, ako keď budete pri tom."
-         data-cs="Po letech společných cest, probdělých nocí a smíchu, který neznal mezí, jsme se rozhodli říct si ano. A nic nás nepotěší víc, než když u toho budete s námi.">
-        Po rokoch spoločných ciest, prebdených nocí a smiechu, ktorý nepoznal medze,
-        sme sa rozhodli povedať si áno. A nič nás nepoteší viac, ako keď budete pri tom.
-      </p>
-    </div>
-    <p style="max-width: 640px; margin: 0 auto; color: var(--text-soft);"
-       data-sk-html="Sobota 29. augusta 2026 · Statek Opajda · Horní Rožínka<br>Príďte tak akí ste — s úsmevom a chuťou oslavovať."
-       data-cs-html="Sobota 29. srpna 2026 · Statek Opajda · Horní Rožínka<br>Přijďte tak jací jste — s úsměvem a chutí slavit.">
-      Sobota 29. augusta 2026 · Statek Opajda · Horní Rožínka<br>
-      Príďte tak akí ste — s úsmevom a chuťou oslavovať.
-    </p>
-  </div>
-</section>
-
-<section class="alt-bg">
-  <div class="section-inner">
-    <div class="section-head">
-      <span class="eyebrow" data-sk="Náš deň v skratke" data-cs="Náš den ve zkratce">Náš deň v skratke</span>
-      <h2 data-sk="Čo nás čaká" data-cs="Co nás čeká">Čo nás čaká</h2>
-    </div>
-    <div class="cards">
-      <a href="miesto.html" class="card">
-        <div class="card-img" style="background-image: url('Opajda_files/Opajda_files/205.webp');"></div>
-        <div class="card-body">
-          <h3 data-sk="Miesto" data-cs="Místo">Miesto</h3>
-          <p data-sk="Statek Opajda — staré stavení s kameňom, drevom a rybníkom uprostred Vysočiny."
-             data-cs="Statek Opajda — staré stavení s kamenem, dřevem a rybníkem uprostřed Vysočiny.">Statek Opajda — staré stavení s kameňom, drevom a rybníkom uprostred Vysočiny.</p>
-          <span class="card-link" data-sk="Pozri detaily" data-cs="Zobrazit detaily">Pozri detaily</span>
-        </div>
-      </a>
-      <a href="program.html" class="card">
-        <div class="card-img" style="background-image: url('Opajda_files/svatby_files/150.webp');"></div>
-        <div class="card-body">
-          <h3 data-sk="Program" data-cs="Program">Program</h3>
-          <p data-sk="Obrad o tretej popoludní, potom prípitok, fotenie, slávnostná večera a oslava."
-             data-cs="Obřad o třetí odpoledne, potom přípitek, focení, slavnostní večeře a oslava.">Obrad o tretej popoludní, potom prípitok, fotenie, slávnostná večera a oslava.</p>
-          <span class="card-link" data-sk="Časový plán" data-cs="Časový plán">Časový plán</span>
-        </div>
-      </a>
-      <a href="doprava.html" class="card">
-        <div class="card-img" style="background-image: url('Opajda_files/Opajda_files/211.webp');"></div>
-        <div class="card-body">
-          <h3 data-sk="Doprava & ubytovanie" data-cs="Doprava & ubytování">Doprava & ubytovanie</h3>
-          <p data-sk="Ako sa dostať na statok a kde prespať — všetko prehľadne na jednom mieste."
-             data-cs="Jak se dostat na statek a kde přespat — vše přehledně na jednom místě.">Ako sa dostať na statok a kde prespať — všetko prehľadne na jednom mieste.</p>
-          <span class="card-link" data-sk="Praktické info" data-cs="Praktické info">Praktické info</span>
-        </div>
-      </a>
-      <a href="prakticke.html" class="card">
-        <div class="card-img" style="background-image: url('Opajda_files/svatby_files/100.webp');"></div>
-        <div class="card-body">
-          <h3 data-sk="Praktické" data-cs="Praktické">Praktické</h3>
-          <p data-sk="Dress code, darčeky a pár fotiek miesta, aby ste vedeli, do čoho idete."
-             data-cs="Dress code, dárky a pár fotek místa, abyste věděli, do čeho jdete.">Dress code, darčeky a pár fotiek miesta, aby ste vedeli, do čoho idete.</p>
-          <span class="card-link" data-sk="Viac info" data-cs="Více info">Viac info</span>
-        </div>
-      </a>
-      <a href="rsvp.html" class="card">
-        <div class="card-img" style="background-image: url('Opajda_files/svatby_files/120.webp');"></div>
-        <div class="card-body">
-          <h3 data-sk="RSVP" data-cs="RSVP">RSVP</h3>
-          <p data-sk-html="Potvrďte nám prosím účasť do <strong>30. júna 2026</strong>. Stačí pár minút."
-             data-cs-html="Potvrďte nám prosím účast do <strong>30. června 2026</strong>. Stačí pár minut.">Potvrďte nám prosím účasť do <strong>30. júna 2026</strong>. Stačí pár minút.</p>
-          <span class="card-link" data-sk="Vyplniť formulár" data-cs="Vyplnit formulář">Vyplniť formulár</span>
-        </div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="section-inner">
-    <div class="callout">
-      <h3 data-sk="Ešte ste nepotvrdili účasť?" data-cs="Ještě jste nepotvrdili účast?">Ešte ste nepotvrdili účasť?</h3>
-      <p style="margin-bottom: 1.2rem;"
-         data-sk="Pomôže nám to s prípravou — ďakujeme!"
-         data-cs="Pomůže nám to s přípravou — děkujeme!">Pomôže nám to s prípravou — ďakujeme!</p>
-      <a href="rsvp.html" class="btn btn-big" data-sk="Vyplniť RSVP" data-cs="Vyplnit RSVP">Vyplniť RSVP</a>
-    </div>
-  </div>
-</section>
-
 <footer>
   <div class="names">Veronika <span class="amp">&</span> Matúš</div>
   <div data-sk="29. 08. 2026 · Statek Opajda" data-cs="29. 08. 2026 · Statek Opajda">29. 08. 2026 · Statek Opajda</div>
-  <div class="small" data-sk="S láskou ♥" data-cs="S láskou ♥">S láskou ♥</div>
+  <div class="small" data-sk="Tešíme sa na vás ♥" data-cs="Těšíme se na vás ♥">Tešíme sa na vás ♥</div>
 </footer>
 
 <script src="assets/script.js"></script>
