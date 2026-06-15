@@ -49,6 +49,7 @@ wedding20260829/
 ├── doprava.html      # Mapa, ako sa dostať, ubytovanie
 ├── prakticke.html    # Dress code, darčeky, galéria, FAQ
 ├── rsvp.html         # Odkaz na Google Forms + zoznam otázok + kontakty
+├── favicon.svg       # Favicon — dva spojené svadobné prstene (cream + žltý) na tmavozelenom rounded square. Path-only (žiadny &lt;text&gt;), aby fungoval vo všetkých prehliadačoch.
 ├── assets/
 │   ├── style.css     # Všetky štýly, CSS premenné na začiatku (paleta)
 │   └── script.js     # Mobilné menu, countdown, fade-in pri scrollovaní
